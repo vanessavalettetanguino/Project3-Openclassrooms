@@ -1,4 +1,91 @@
-h1
-{
-    color:black;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Shirkhand';
+    src: url('Fonts/Shirkhand/Shirkhand-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  width: 100%;
+  margin: auto;
+}
+
+
+header {
+    max-width: 50%;
+    margin: 30px auto 20px auto;
+}
+
+.rest-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rest-search__darkgrey {
+    background-color: rgb(234,234,234);
+}
+
+.rest-search__light-grey {
+    background-color: rgb(245,245,245);
+}
+
+.rest-search__form {
+    padding: 10px;
+    font-size: 20px;   
+}
+
+.search-form {
+    border: none;
+    width: 80%;
+    text-align: center;
+}
+
+.fa-location-dot {
+    margin-left: 10px;
+}
+
+
+.rest-search__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.rest-search__heading {
+    width: 70%;
+    word-wrap: break-word;
+    margin: 30px 0px 5px 0px;
+    font-size: 28px;
+}
+
+.rest-search__heading-desc {
+    width: 90%;
+    word-wrap: break-word ;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 5px 0px 30px 0px;
+}
+
+.btn {
+    border-radius:30px;
+    border: none;
+    background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    color:white;
+    margin-bottom:30px;
+    font-size: 20px;
+    width: 60%;
+}
+
+img {
+    max-width: 100%;
+}
+
