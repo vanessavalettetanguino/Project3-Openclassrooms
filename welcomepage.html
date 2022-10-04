@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="CSS/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" href="CSS/normalize.css"/>
+    <link rel="stylesheet" href="CSS/mobile.css"/>
+    <link rel="stylesheet" href="CSS/desktop.css" media="screen and (min-width:767px)"/>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
         integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
@@ -16,16 +18,16 @@
     <header>
         <img src="images/logo/ohmyfood.png" alt="logo_Ohmyfood" id="logo" />
     </header>
-    <section class="rest-search">
+    <section class="rest-search rest-search--darkgrey">
         <form class="rest-search__form">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="search" name="search_text" id="search-form" value="Paris,Belleville" />
+            <input type="search" name="search_text" class="search-form rest-search--darkgrey" value="Paris, Belleville" />
         </form>
-        <div class="rest-search__detail">
-            <h1>Réservez le menu qui vous convient</h1>
-            <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-            <button class="rest-search__btn">
-                <p>Explorer nos restaurants</p>
+        <div class="rest-search__detail rest-search--light-grey">
+            <h1 class="rest-search__heading">Réservez le menu qui vous convient</h1>
+            <h2 class="rest-search__heading-desc">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+    <button class="btn btn-search btn--gradient">
+                <p class="btn-search__text">Explorer nos restaurants</p>
             </button>
         </div>
     </section>
