@@ -1,17 +1,128 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import ".base/fonts.scss";
- *   |         ^^^^^^^^^^^^^^^^^^
- *   '
- *   sass/main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \".base/fonts.scss\";\a   \2502          ^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/main.scss 1:9  root stylesheet";
+.hiw {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  margin-left: 10px;
 }
+
+.hiw-step {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-items: center;
+  margin: 10px 5px 5px 10px;
+  border-radius: 15px;
+  width: 90%;
+  min-height: 33%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hiw-step__icon {
+  color: rgb(125, 125, 125);
+  margin: auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 16px;
+}
+
+.hiw-step__number {
+  background-color: #9356DC;
+  border-radius: 30px;
+  color: #FFF;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  position: -2em;
+}
+
+.hiw-step__text {
+  margin: auto 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hiw-step:hover {
+  background-color: rgb(245, 237, 255);
+}
+.hiw-step:hover__icon {
+  background-color: rgb(245, 237, 255);
+  color: #9356DC;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shirkhand";
+  src: url("Fonts/Shirkhand/Shirkhand-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  border-radius: 30px;
+  border: none;
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
+  width: max-content;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.btn--gradient {
+  background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+}
+
+header {
+  max-width: 50%;
+  margin: 30px auto 20px auto;
+}
+
+.rest-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rest-search--darkgrey {
+  background-color: rgb(234, 234, 234);
+}
+
+.rest-search--light-grey {
+  background-color: rgb(245, 245, 245);
+}
+
+.rest-search__form {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.search-form {
+  border: none;
+  width: 80%;
+  text-align: center;
+}
+
+.fa-location-dot {
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
