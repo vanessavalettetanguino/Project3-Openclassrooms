@@ -1,0 +1,29 @@
+.rest-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rest-search--darkgrey {
+    background-color: $color-backdark;
+}
+
+.rest-search--light-grey {
+    background-color: $color-backlight;
+}
+
+.rest-search__form {
+    padding: 10px;
+    font-size: 20px;   
+}
+
+.search-form {
+    border: none;
+    width: 80%;
+    text-align: center;
+}
+
+.fa-location-dot {
+    margin-left: 10px;
+}
