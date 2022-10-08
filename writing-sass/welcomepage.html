@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="CSS/normalize.css"/>
-    <link rel="stylesheet" href="CSS/mobile.css"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
     <link rel="stylesheet" href="CSS/desktop.css" media="screen and (min-width:767px)"/>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
@@ -20,8 +20,8 @@
     </header>
     <section class="rest-search rest-search--darkgrey">
         <form class="rest-search__form">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="search" name="search_text" class="search-form rest-search--darkgrey" value="Paris, Belleville" />
+            <i class="rest-search__icon fa-solid fa-location-dot"></i>
+            <input type="search" name="search_text" class="rest-search__form--input rest-search--darkgrey" value="Paris, Belleville" />
         </form>
         <div class="rest-search__detail rest-search--light-grey">
             <h1 class="rest-search__heading">Réservez le menu qui vous convient</h1>
@@ -32,7 +32,7 @@
         </div>
     </section>
     <section class="hiw">
-        <h1>Fonctionnement</h1>
+        <h1 class="hiw__heading">Fonctionnement</h1>
         <div class="hiw-step">
             <p class="hiw-step__number">1</p>
             <i class="fa-solid fa-mobile-screen-button hiw-step__icon"></i>
@@ -85,7 +85,7 @@
                     <h3 class="rest-card-prev__rest-name">À la française</h3>
                     <p class="rest-card-prev__location">Cité Rouge</p>
                 </div>
-                <i class="fa-light fa-heart"></i>
+                <i class="rest-card-prev__icon fa-light fa-heart"></i>
             </div>
             </a>
         </div>
