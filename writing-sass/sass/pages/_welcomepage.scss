@@ -4,8 +4,10 @@
     align-items: flex-start;
     text-align: center;
     margin-left: 10px;
+    .hiw__heading {
+        margin: 30px 0px 20px 10px;
+    }
 }
-
 .hiw-step {
     display: flex;
     align-items: flex-start;
@@ -20,9 +22,7 @@
     .hiw-step__icon {
         color: $color-icon-inactive;
         margin: auto 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center-center;
         justify-items: center;
         font-size: 16px;
     }
@@ -32,21 +32,7 @@
         color: $color-white;
         width: 25px;
         height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 20px;
-        position: -2em;
-    }
-    .hiw-step__number {
-        background-color: $color-primary;
-        border-radius: 30px;
-        color: $color-white;
-        width: 25px;
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center-center;
         margin-right: 20px;
         position: -2em;
     }
@@ -59,6 +45,60 @@
         background-color: $color-step-active;
         .hiw-step__icon {
             color: $color-primary;
+        }
+    }
+}
+
+.rest-results {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin-left: 10px;
+    .rest-results__heading {
+        margin: 80px 0px 20px 10px;
+    }
+}
+
+.rest-card-prev {
+    @include flex-col-flexstart; 
+    margin: 10px auto;
+    border-radius: 15px;
+    width: 90%;
+    text-align: left;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    .rest-card-prev__link {
+        @include flex-col-flexstart;
+        width: 100%;
+        text-decoration: none;
+        object-fit: over;
+        .rest-card-prev__image {
+            border-radius: 15px 15px 0px 0px;
+            height: 200px;
+            width: 100%;
+            .rest-card-prev__new{
+                background-color: $color-tertiary;
+                color: $color-white;
+                width: 100px;
+                height: 25px;
+                @include flex-center-center;
+                margin-right: 20px;
+            }
+        .rest-card-prev__content {
+            display: flex;
+            justify-content: space-between;
+            .rest-card-prev__texts {
+                @include flex-col-flexstart;
+             }
+            .rest-card-prev__icon {
+                text-decoration: none;
+            }
+            .rest-card-prev__rest-name {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }
