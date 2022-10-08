@@ -1,4 +1,11 @@
-@mixin hiw-icon-selection {
-    background-color: $color-step-active;
-    color: $color-primary;
+@mixin flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-col-flexstart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
