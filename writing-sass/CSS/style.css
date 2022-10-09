@@ -5,6 +5,9 @@
   text-align: center;
   margin-left: 10px;
 }
+.hiw .hiw__heading {
+  margin: 30px 0px 20px 10px;
+}
 
 .hiw-step {
   display: flex;
@@ -18,8 +21,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
-
-.hiw-step__icon {
+.hiw-step .hiw-step__icon {
   color: rgb(125, 125, 125);
   margin: auto 10px;
   display: flex;
@@ -28,8 +30,7 @@
   justify-items: center;
   font-size: 16px;
 }
-
-.hiw-step__number {
+.hiw-step .hiw-step__number {
   background-color: #9356DC;
   border-radius: 30px;
   color: #FFF;
@@ -41,19 +42,84 @@
   margin-right: 20px;
   position: -2em;
 }
-
-.hiw-step__text {
+.hiw-step .hiw-step__text {
   margin: auto 20px;
   font-size: 16px;
   font-weight: 600;
 }
-
 .hiw-step:hover {
   background-color: rgb(245, 237, 255);
 }
-.hiw-step:hover__icon {
-  background-color: rgb(245, 237, 255);
+.hiw-step:hover .hiw-step__icon {
   color: #9356DC;
+}
+
+.rest-results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  margin-left: 10px;
+}
+.rest-results .rest-results__heading {
+  margin: 80px 0px 20px 10px;
+}
+
+.rest-card-prev {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px auto;
+  border-radius: 15px;
+  width: 90%;
+  height: 40%;
+  text-align: left;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.rest-card-prev .rest-card-prev__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  object-fit: over;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__new {
+  background-color: #99E2D0;
+  color: #FFF;
+  width: 100px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__image {
+  border-radius: 15px 15px 0px 0px;
+  height: 200px;
+  width: 100%;
+  flex-grow: 0;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon {
+  font-size: 30px;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  text-decoration: none;
+  width: 90%;
+  align-items: center;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__content .rest-card-prev__texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__content .rest-card-prev__rest-name {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 @font-face {
@@ -80,9 +146,9 @@ img {
   border: none;
   color: white;
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 18px;
   width: max-content;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px;
   cursor: pointer;
 }
 
@@ -101,6 +167,37 @@ header {
   align-items: center;
   text-align: center;
 }
+.rest-search .rest-search__form {
+  padding: 10px;
+  font-size: 20px;
+}
+.rest-search .rest-search__icon {
+  margin-left: 10px;
+}
+.rest-search .rest-search__form--input {
+  border: none;
+  width: 80%;
+  text-align: center;
+}
+.rest-search .rest-search__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.rest-search .rest-search__heading {
+  width: 70%;
+  word-wrap: break-word;
+  margin: 40px 0px 5px 0px;
+  font-size: 30px;
+}
+.rest-search .rest-search__heading-desc {
+  width: 90%;
+  word-wrap: break-word;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 10px 0px 30px 0px;
+}
 
 .rest-search--darkgrey {
   background-color: rgb(234, 234, 234);
@@ -110,19 +207,23 @@ header {
   background-color: rgb(245, 245, 245);
 }
 
-.rest-search__form {
-  padding: 10px;
-  font-size: 20px;
+.footer {
+  background-color: rgb(53, 53, 53);
+  color: #FFF;
+  font-size: 16px;
 }
-
-.search-form {
-  border: none;
-  width: 80%;
-  text-align: center;
+.footer .footer__heading {
+  font-family: Shirkhand;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 900;
 }
-
-.fa-location-dot {
-  margin-left: 10px;
+.footer > ul {
+  list-style: none;
+  padding: 30px 0px 40px 20px;
+}
+.footer > ul .li {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
