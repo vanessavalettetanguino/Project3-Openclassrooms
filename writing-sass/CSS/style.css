@@ -40,7 +40,6 @@
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-  position: -2em;
 }
 .hiw-step .hiw-step__text {
   margin: auto 20px;
@@ -84,6 +83,7 @@
   width: 100%;
   text-decoration: none;
   object-fit: over;
+  position: relative;
 }
 .rest-card-prev .rest-card-prev__link .rest-card-prev__new {
   background-color: #99E2D0;
@@ -93,15 +93,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  bottom: 0;
 }
 .rest-card-prev .rest-card-prev__link .rest-card-prev__image {
   border-radius: 15px 15px 0px 0px;
   height: 200px;
   width: 100%;
   flex-grow: 0;
-}
-.rest-card-prev .rest-card-prev__link .rest-card-prev__icon {
-  font-size: 30px;
 }
 .rest-card-prev .rest-card-prev__link .rest-card-prev__content {
   display: flex;
@@ -112,14 +113,37 @@
   width: 90%;
   align-items: center;
 }
-.rest-card-prev .rest-card-prev__link .rest-card-prev__content .rest-card-prev__texts {
+.rest-card-prev .rest-card-prev__link .rest-card-prev__texts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 }
-.rest-card-prev .rest-card-prev__link .rest-card-prev__content .rest-card-prev__rest-name {
-  font-size: 16px;
+.rest-card-prev .rest-card-prev__link .rest-card-prev__rest-name {
+  font-size: 20px;
   font-weight: 600;
+  margin: 20px 0px 5px 0px;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__location {
+  font-size: 18px;
+  font-size: 400;
+  margin: 0px 0px 20px 0px;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon--active {
+  display: contents;
+  color: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon {
+  font-size: 30px;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon .rest-card-prev__icon--active {
+  display: none;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon:hover {
+  cursor: pointer;
+}
+.rest-card-prev .rest-card-prev__link .rest-card-prev__icon:hover .rest-card-prev__icon--active {
+  display: contents;
 }
 
 @font-face {
@@ -210,20 +234,24 @@ header {
 .footer {
   background-color: rgb(53, 53, 53);
   color: #FFF;
-  font-size: 16px;
-}
-.footer .footer__heading {
-  font-family: Shirkhand;
-  font-size: 26px;
-  font-style: italic;
-  font-weight: 900;
+  font-size: 18px;
 }
 .footer > ul {
   list-style: none;
   padding: 30px 0px 40px 20px;
 }
-.footer > ul .li {
+.footer > ul > li {
   margin-top: 10px;
+}
+.footer > ul > li > a {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer .footer__heading {
+  font-family: Shirkhand;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */
