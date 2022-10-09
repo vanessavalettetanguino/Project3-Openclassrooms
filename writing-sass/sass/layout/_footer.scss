@@ -1,0 +1,18 @@
+.footer {
+    background-color: $color-backfooter;
+    color: $color-white;
+    font-size: 16px;
+    .footer__heading {
+        font-family: Shirkhand;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 900;
+    }
+    >ul {
+        list-style: none;
+        padding: 30px 0px 40px 20px;
+        .li {
+            margin-top: 10px;
+        }
+    }
+}
