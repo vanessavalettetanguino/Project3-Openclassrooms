@@ -2,3 +2,20 @@ header {
     max-width: 50%;
     margin: 30px auto 20px auto;
 }
+
+.header-menupage {
+    max-width: 50%;
+    margin: 30px auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    #logo {
+        margin-left: 100px;
+    }
+    .header-menupage__link {
+        .header-menupage__icon {
+            font-size: 30px;
+            color: black;
+        }
+    }
+}
