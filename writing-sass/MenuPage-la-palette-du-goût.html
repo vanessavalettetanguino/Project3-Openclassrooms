@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="CSS/mobile.css" media="screen and (max-width:767px)" />
+    <link rel="stylesheet" href="CSS/normalize.css"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="stylesheet" href="CSS/desktop.css" media="screen and (min-width:767px)"/>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
         integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
@@ -13,99 +15,97 @@
 </head>
 
 <body>
-    <header>
-        <a href="welcomepage.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <header class="header-menupage">
+        <a  class="header-menupage__link" href="welcomepage.html"><i class="fa-solid fa-arrow-left header-menupage__icon"></i></a>
         <img src="images/logo/ohmyfood.png" alt="logo_Ohmyfood" id="logo" />
     </header>
     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût restaurant table with plates and glasses picture" />
-    <section class="menu">
-        <div id="restaurant-menu">
-            <div class="restaurant-top-title">
-                <h1>La palette du goût</h1>
-                <i class="fa-light fa-heart"></i>
+    <section class="rest-menu">
+            <div class="rest-menu__topheading">
+                <h1  class="rest-menu__heading">La palette du goût</h1>
+                <i class="fa-regular fa-heart rest-menu__likeicon"></i>
             </div>
-            <div class="starters">
-                <h2>Entrées</h2>
-                <div class="course-detail">
-                    <h3>Fricassée d'escargot</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Au piment d'Espelette</p>
-                        <p class="course-price">25€</p>
+            <div class="rest-menu__starters rest-menu__type">
+                <h2 class="rest-menu__type-heading">Entrées</h2>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Fricassée d'escargot</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Au piment d'Espelette</p>
+                        <p class="rest-menu__course-price">25€</p>
                     </span>
                 </div>
-                <div class="course-detail">
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Et ses copeaux de truffe noire</p>
-                        <p class="course-price">35€</p>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Foie gras de canard mi-cuit</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Et ses copeaux de truffe noire</p>
+                        <p class="rest-menu__course-price">35€</p>
                     </span>
                 </div>
-                <div class="course-detail">
-                    <h3>Oeuf au plat</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Assaisonné à la truffe sur lit de caviar</p>
-                        <p class="course-price">20€</p>
-                    </span>
-                </div>
-            </div>
-            <div class="main-courses">
-                <h2>Plats</h2>
-                <div class="course-detail">
-                    <h3>Filet de boeuf aux herbes</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Accompagné de sa ribambelle de légumes</p>
-                        <p class="course-price">40€</p>
-                    </span>
-                </div>
-                <div class="course-detail">
-                    <h3>Parmentier de queue de boeuf</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">À la truffe noire sur sa purée de panais</p>
-                        <p class="course-price">35€</p>
-                    </span>
-                </div>
-                <div class="course-detail">
-                    <h3>Filet de turbot</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Aux agrumes</p>
-                        <p class="course-price">44€</p>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Oeuf au plat</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="rest-menu__course-price">20€</p>
                     </span>
                 </div>
             </div>
-            <div class="desserts">
-                <h2>Desserts</h2>
-                <div class="course-detail">
-                    <h3>Paris-Brest</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Revisité</p>
-                        <p class="course-price">18€</p>
+            <div class="main-courses rest-menu__type">
+                <h2 class="rest-menu__type-heading">Plats</h2>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Filet de boeuf aux herbes</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Accompagné de sa ribambelle de légumes</p>
+                        <p class="rest-menu__course-price">40€</p>
                     </span>
                 </div>
-                <div class="course-detail">
-                    <h3>Macaron au chocolat d'exception</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Et glace à la vanille de Madagascar</p>
-                        <p class="course-price">22€</p>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Parmentier de queue de boeuf</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">À la truffe noire sur sa purée de panais</p>
+                        <p class="rest-menu__course-price">35€</p>
                     </span>
                 </div>
-                <div class="course-detail">
-                    <h3>Mousse au chocolat</h3>
-                    <span class="course-description-price">
-                        <p class="course-description">Au piment d'Espelette et à la truffe noire</p>
-                        <p class="course-price">23€</p>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Filet de turbot</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Aux agrumes</p>
+                        <p class="rest-menu__course-price">44€</p>
                     </span>
                 </div>
             </div>
-        </div>
-        <button class="btn">Commander</button>
+            <div class="desserts rest-menu__type">
+                <h2 class="rest-menu__type-heading">Desserts</h2>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Paris-Brest</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Revisité</p>
+                        <p class="rest-menu__course-price">18€</p>
+                    </span>
+                </div>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Macaron au chocolat d'exception</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Et glace à la vanille de Madagascar</p>
+                        <p class="rest-menu__course-price">22€</p>
+                    </span>
+                </div>
+                <div class="rest-menu__course">
+                    <h3 class="rest-menu__course-name">Mousse au chocolat</h3>
+                    <span class="rest-menu__course-details">
+                        <p class="rest-menu__course-desc">Au piment d'Espelette et à la truffe noire</p>
+                        <p class="rest-menu__course-price">23€</p>
+                    </span>
+                </div>
+            </div>
+        <button class="btn btn-order btn--gradient">Commander</button>
     </section>
 </body>
-<footer>
+<footer class="footer">
     <ul>
-        <li><img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" /></li>
-        <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
-        <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        <li class="footer__heading">ohmyfood</li>
+        <li class="footer__link-submit"><i class="fa-solid fa-utensils footer__icon"></i> Proposer un restaurant</li>
+        <li class="footer__link-submit"><i class="fa-solid fa-handshake-angle footer__icon"></i> Devenir partenaire</li>
+        <li class="footer__link">Mentions légales</li>
+        <li class="footer__link"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
     </ul>
 </footer>
