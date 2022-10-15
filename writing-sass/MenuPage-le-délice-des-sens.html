@@ -4,9 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="CSS/normalize.css"/>
-    <link rel="stylesheet" href="CSS/style.css"/>
-    <link rel="stylesheet" href="CSS/desktop.css" media="screen and (min-width:767px)"/>
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/desktop.css" media="screen and (min-width:767px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
         integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
@@ -16,89 +21,93 @@
 
 <body>
     <header class="header-menupage">
-        <a  class="header-menupage__link" href="welcomepage.html"><i class="fa-solid fa-arrow-left header-menupage__icon"></i></a>
+        <a class="header-menupage__link" href="welcomepage.html"><i
+                class="fa-solid fa-arrow-left header-menupage__icon"></i></a>
         <img src="images/logo/ohmyfood.png" alt="logo_Ohmyfood" id="logo" />
     </header>
-    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens course picture" class="rest-banner-image"/>
+    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+        alt="Le délice des sens course picture" class="rest-banner-image" />
     <section class="rest-menu">
-            <div class="rest-menu__topheading">
-                <h1 class="rest-menu__heading">Le délice des sens</h1>
-                <i class="fa-regular fa-heart rest-menu__likeicon"></i>
+        <div class="rest-menu__topheading">
+            <h1 class="rest-menu__heading">Le délice des sens</h1>
+            <i class="fa-regular fa-heart rest-menu__likeicon"></i>
+        </div>
+        <div class="rest-menu__starters">
+            <h2 class="rest-menu__type-heading">Entrées</h2>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Tartare de thon</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Assaisonné au yuzu</p>
+                    <p class="rest-menu__course-price">25€</p>
+                </span>
             </div>
-            <div class="rest-menu__starters">
-                <h2 class="rest-menu__type-heading">Entrées</h2>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Tartare de thon</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Assaisonné au yuzu</p>
-                        <p class="rest-menu__course-price">25€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Bouchée de homard croustillant</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Et sa farandole de petits légumes</p>
-                        <p class="rest-menu__course-price">35€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Velouté de cèpes</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Aux truffes</p>
-                        <p class="rest-menu__course-price">20€</p>
-                    </span>
-                </div>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Bouchée de homard croustillant</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Et sa farandole de petits légumes</p>
+                    <p class="rest-menu__course-price">35€</p>
+                </span>
             </div>
-            <div class="rest-menu__main-courses">
-                <h2 class="rest-menu__type-heading">Plats</h2>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Poulet rôti aux herbes de Provence</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Et sa crème de truffe</p>
-                        <p class="rest-menu__course-price">40€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Langouste rôtie</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Et ses légumes de saison</p>
-                        <p class="rest-menu__course-price">35€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Côte de boeuf Angus</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Et sa purée de panais</p>
-                        <p class="rest-menu__course-price">44€</p>
-                    </span>
-                </div>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Velouté de cèpes</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Aux truffes</p>
+                    <p class="rest-menu__course-price">20€</p>
+                </span>
             </div>
-            <div class="rest-menu__desserts">
-                <h2 class="rest-menu__type-heading">Desserts</h2>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Farandole de desserts</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Du chef</p>
-                        <p class="rest-menu__course-price">18€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Crème brulée</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">Revisitée</p>
-                        <p class="rest-menu__course-price">22€</p>
-                    </span>
-                </div>
-                <div class="rest-menu__course">
-                    <h3 class="rest-menu__course-name">Tiramisu</h3>
-                    <span class="rest-menu__course-details">
-                        <p class="rest-menu__course-desc">À la noisette</p>
-                        <p class="rest-menu__course-price">23€</p>
-                    </span>
-                </div>
+        </div>
+        <div class="rest-menu__main-courses">
+            <h2 class="rest-menu__type-heading">Plats</h2>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Poulet rôti aux herbes de Provence</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Et sa crème de truffe</p>
+                    <p class="rest-menu__course-price">40€</p>
+                </span>
             </div>
-        <button class="btn btn-order btn--gradient">Commander</button>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Langouste rôtie</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Et ses légumes de saison</p>
+                    <p class="rest-menu__course-price">35€</p>
+                </span>
+            </div>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Côte de boeuf Angus</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Et sa purée de panais</p>
+                    <p class="rest-menu__course-price">44€</p>
+                </span>
+            </div>
+        </div>
+        <div class="rest-menu__desserts">
+            <h2 class="rest-menu__type-heading">Desserts</h2>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Farandole de desserts</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Du chef</p>
+                    <p class="rest-menu__course-price">18€</p>
+                </span>
+            </div>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Crème brulée</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">Revisitée</p>
+                    <p class="rest-menu__course-price">22€</p>
+                </span>
+            </div>
+            <div class="rest-menu__course">
+                <h3 class="rest-menu__course-name">Tiramisu</h3>
+                <span class="rest-menu__course-details">
+                    <p class="rest-menu__course-desc">À la noisette</p>
+                    <p class="rest-menu__course-price">23€</p>
+                </span>
+            </div>
+        </div>
     </section>
+    <div class="order-now">
+        <button class="btn--gradient btn btn-order">Commander</button>
+    </div>
 </body>
 <footer class="footer">
     <ul>
