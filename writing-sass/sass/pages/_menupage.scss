@@ -1,5 +1,8 @@
 .rest-banner-image {
     z-index: 1;
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
 }
 .rest-menu {
     background-color: $color-backlight;
@@ -18,9 +21,9 @@
         }
     }
     .rest-menu__heading {
-        font-family: Shirkhand;
+        font-family: Shrikhand;
         font-style: italic;
-        font-weight: 900;
+        font-weight: 500;
         font-size: 34px;
 }
     .rest-menu__type-heading {
@@ -52,4 +55,8 @@
             justify-content: space-between;
         }
     }
+}
+.order-now {
+    display: flex;
+    background-color: $color-backlight;
 }
