@@ -1,16 +1,21 @@
 .btn {
-    border-radius:30px;
+    border-radius: 30px;
     border: none;
-    color:white;
-    margin-bottom:50px;
+    color: white;
+    margin-bottom: 50px;
     font-size: 18px;
     width: max-content;
     padding: 0px 20px;
     cursor: pointer;
-}
-
-.btn--gradient {
-    background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    box-shadow: $shadow-reg;
+    transform: scale(1);
+    transition: transform 300ms;
+    background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: $shadow-accent;
+        background: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
+    }
 }
 
 .btn-order {
