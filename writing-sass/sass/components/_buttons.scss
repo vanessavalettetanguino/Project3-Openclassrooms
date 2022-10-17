@@ -8,13 +8,11 @@
     padding: 0px 20px;
     cursor: pointer;
     box-shadow: $shadow-reg;
-    transform: scale(1);
-    transition: transform 300ms;
-    background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    transition: background-image 450ms, box-shadow 450ms 150ms;
     &:hover {
-        transform: scale(1.01);
         box-shadow: $shadow-accent;
-        background: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
+        background-image: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
     }
 }
 
