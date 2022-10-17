@@ -77,7 +77,7 @@
     height: 40%;
     text-align: left;
     color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow-reg;
 
     .rest-card-prev__link {
         @include flex-col-flexstart;
@@ -132,7 +132,6 @@
                 }
                 .rest-card-prev__icon--active {
                     display: contents;
-                    color: $color-gradient;
                 }
                 .rest-card-prev__icon {
                     font-size: 30px;
