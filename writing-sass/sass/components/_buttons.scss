@@ -1,18 +1,34 @@
 .btn {
-    border-radius: 30px;
+    border-radius: 3em;
     border: none;
     color: white;
     margin-bottom: 50px;
     font-size: 18px;
-    width: max-content;
     padding: 0px 20px;
     cursor: pointer;
     box-shadow: $shadow-reg;
-    background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-    transition: background-image 450ms, box-shadow 450ms 150ms;
+    background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    position:relative;
+    z-index: 1;
     &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        border-radius: 3em;
+        border: none;
+        position:absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         box-shadow: $shadow-accent;
-        background-image: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
+        background: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
     }
 }
 
