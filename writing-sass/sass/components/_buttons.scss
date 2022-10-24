@@ -7,7 +7,11 @@
     padding: 0px 20px;
     cursor: pointer;
     box-shadow: $shadow-reg;
+<<<<<<< HEAD
     background: linear-gradient(to right bottom, $color-grad-1, $color-grad-2, $color-grad-3, $color-grad-4, $color-grad-5);
+=======
+    background: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+>>>>>>> 5df00baa30a3932114f5921ec3bdb20fe2acbcdb
     position:relative;
     z-index: 1;
     &:hover {
