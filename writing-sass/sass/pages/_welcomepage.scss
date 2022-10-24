@@ -79,6 +79,10 @@
     color: black;
     box-shadow: $shadow-reg;
 
+    &:hover {
+        box-shadow: $shadow-card-accent;
+    }
+
     .rest-card-prev__link {
         @include flex-col-flexstart;
         width: 100%;
@@ -88,7 +92,7 @@
 
         .rest-card-prev__new {
             background-color: $color-tertiary;
-            color: darken($color-tertiary,35%);
+            color: darken($color-tertiary, 35%);
             width: 80px;
             height: 25px;
             @include flex-center-center;
@@ -96,55 +100,79 @@
             right: 0.5em;
             top: 0;
             bottom: 0;
-            }
+        }
 
         .rest-card-prev__image {
             border-radius: 15px 15px 0px 0px;
             height: 200px;
             width: 100%;
             object-fit: cover;
-            }
-            .rest-card-prev__content {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-left: 10px;
-                text-decoration: none;
-                width: 90%;
-                align-items: center;
-                }
-                .rest-card-prev__texts {
-                    @include flex-col-flexstart;
-                    justify-content: flex-start;
-                }
-
-                .rest-card-prev__rest-name {
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin: 20px 0px 5px 0px;
-
-                }
-
-                .rest-card-prev__location {
-                    font-size: 18px;
-                    font-size: 400;
-                    margin: 0px 0px 20px 0px;
-                }
-                .rest-card-prev__icon--active {
-                    display: contents;
-                }
-                .rest-card-prev__icon {
-                    font-size: 30px;
-                    .rest-card-prev__icon--active {
-                        display: none;
-                    }
-                    &:hover {
-                        cursor: pointer;
-                        .rest-card-prev__icon--active {
-                            display: contents;
-                        }
-
-                    }
-                  }
         }
+
+        .rest-card-prev__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 10px;
+            text-decoration: none;
+            width: 98%;
+            align-items: center;
+        }
+
+        .rest-card-prev__texts {
+            @include flex-col-flexstart;
+            justify-content: flex-start;
+        }
+
+        .rest-card-prev__rest-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 20px 0px 5px 0px;
+
+        }
+
+        .rest-card-prev__location {
+            font-size: 18px;
+            font-size: 400;
+            margin: 0px 0px 20px 0px;
+        }
+
+        .rest-card-prev__hearticon {
+            margin: 10px 10px 10px 10px;
+            &--reg {
+                display: contents;
+                font-size: 30px;
+
+                &:hover {
+                    cursor: pointer;
+                    display: none;
+                }
+            }
+
+            &--active {
+                font-size: 30px;
+                color: transparent;
+                background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+
+                &:hover, &:active {
+                    animation: heart-filling 5OOOms ease-in-out forwards;
+                }
+            }
+        }
+
     }
+}
+
+@keyframes heart-filling {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
