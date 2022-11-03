@@ -1,18 +1,22 @@
 .loader-block {
     font-family: 'Shrikhand', sans-serif;
     font-size: 22px;
-    width: 100%;
+    z-index: index 1;
     height: 100%;
-    line-height: 200px;
     color: black; 
     margin: auto;
-    text-align: center;
     background-color: $color-backlight;
-    position: absolute;
-    top: 0;
-    right:0;
-    bottom:0;
-    left:0;
+    position: relative;
+    &::before {
+        content:"";
+        display: none;
+    }
+    &::after {
+        content: "";
+        height: 100%;
+        animation: fadein 3000ms timing-function 0s 1;
+
+    }
 }
 
 .loader { 
@@ -54,6 +58,15 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+    100% { 
+        opacity:0;
+    }
+} 
 
 .hiw {
     display: flex;
@@ -161,33 +174,19 @@
             right:20px;
             background-color: none;
             color: transparent;
-            &:hover {
+            &:hover .{
                     content:"";
                     cursor: pointer;
                     background-clip: text;
                     -webkit-background-clip: text;
                     background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
                     color: transparent;
-                    animation: filling 150ms 0s ease-in-out forwards;
+                    overflow: hidden;
+                    animation: filling 1000ms 0s ease-in-out backwards;
             }
-
-            &:active {
-                opacity: 1;
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
-                color: transparent;
-                animation: filling 150ms 0s ease-in-out forwards;
-            }
-            &:focus {
-                z-index: 1;
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
-                color: transparent;
             }
         }
-    }
+    
 
     .rest-card-prev__link {
         @include flex-col-flexstart;
