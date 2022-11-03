@@ -1,40 +1,40 @@
 .loader-block {
     font-family: 'Shrikhand', sans-serif;
     font-size: 22px;
-    z-index: index 1;
+    color: black;
     height: 100%;
-    color: black; 
-    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:fixed;
     background-color: $color-backlight;
-    position: relative;
-    &::before {
-        content:"";
-        display: none;
-    }
-    &::after {
-        content: "";
-        height: 100%;
-        animation: fadein 3000ms timing-function 0s 1;
-
-    }
+    animation: begin 3000ms 0s ease-in-out forwards;
 }
 
-.loader { 
-    width: 50px ;
+.loader {
+    width: 50px;
     height: 50px;
     display: inline-block;
     vertical-align: middle;
+    align-content: center;
     position: relative;
 }
 
 .loader-block__ring {
     border-radius: 50px;
     border: 6px solid $color-backdark-50;
-    margin-right:10px;
+    margin-right: 10px;
+
     &::after {
-        content:"";
+        content: "";
         position: absolute;
-        top:-6px;
+        top: -6px;
         left: -6px;
         bottom: -6px;
         right: -6px;
@@ -45,28 +45,55 @@
     }
 }
 
-@keyframes spin { 
+@keyframes spin {
     0% {
-        transform: rotate(0deg) ;
+        transform: rotate(0deg);
         border-top-color: $color-primary;
     }
+
     50% {
         transform: rotate(180deg);
         border-top-color: $color-secondary;
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
-@keyframes fadein {
+@keyframes begin {
     0% {
+     opacity:1;
+     z-index:10;
+    } 
+ 
+    100% {
+     opacity:0;
+     z-index: -1;
+    }
+ 
+ }
+
+
+.main-block {
+animation: slidein 3000ms 3000ms ease-in-out backwards;
+}
+
+.footer {
+ animation: slidein 3000ms 3000ms ease-in-out backwards;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
         opacity: 1;
+        z-index: 10;
     }
-    100% { 
-        opacity:0;
-    }
-} 
+}
 
 .hiw {
     display: flex;
@@ -149,44 +176,58 @@
     color: black;
     box-shadow: $shadow-reg;
     position: relative;
+
     &:hover {
         box-shadow: $shadow-card-accent;
     }
 
     &__hearticon--reg {
-            display: contents;
-            font-size: 30px;
-            margin: 10px 10px 10px 10px;
-            position: absolute;
-            bottom: 20px;
-            right:20px;
-            &:hover {
-                cursor: pointer;
-                display: none;
-            }
+        display: contents;
+        font-size: 30px;
+        margin: 10px 10px 10px 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            display: none;
         }
+    }
 
     &__hearticon--solid {
-            font-size: 30px;
-            margin: 10px 10px 10px 10px;
-            position: absolute;
-            bottom: 20px;
-            right:20px;
-            background-color: none;
+        font-size: 30px;
+        margin: 10px 10px 10px 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: none;
+        color: transparent;
+        transition: scale(1);
+
+        &:hover {
+            content: "";
+            cursor: pointer;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
             color: transparent;
-            &:hover .{
-                    content:"";
-                    cursor: pointer;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
-                    color: transparent;
-                    overflow: hidden;
-                    animation: filling 1000ms 0s ease-in-out backwards;
-            }
-            }
+            overflow: hidden;
+            animation: filling 850ms 0s ease-in-out backwards;
+        }
+    }
+
+@keyframes filling {
+        from {
+            transform: scaleX(1);
+            opacity: 0.1;
         }
     
+        to {
+            transform: scaleX(1.15);
+            opacity: 1;
+        }
+    }
 
     .rest-card-prev__link {
         @include flex-col-flexstart;
@@ -243,16 +284,4 @@
         }
 
     }
-
-@keyframes filling {
-    from {
-        transform: scaleX(O);
-        opacity: 0.1;
-    }
-
-    to {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-
-}
+ }
