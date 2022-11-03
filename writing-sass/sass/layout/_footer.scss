@@ -2,11 +2,32 @@
     background-color: $color-backfooter;
     color: $color-white;
     font-size: 18px;
+    &__lists-icons {
+        display: flex;
+        list-style: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        > ul {
+            list-style: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-inline-start: 3px;
+            > li {
+                margin-top: 5px;
+                > .footer__icon {
+                    margin-right: 15px;
+                    font-size: 16px;
+                }
+        }
+     }
+ }
+
     > ul {
         list-style: none;
         padding: 20px 0px 40px 20px;
         margin-top: 0px;
         margin-bottom: 0px;
+
         > li {
             margin-top: 5px;
             > .footer__icon {
@@ -26,4 +47,4 @@
         font-weight: 900;
         padding-bottom: 10px;
     }
-}
+ }
