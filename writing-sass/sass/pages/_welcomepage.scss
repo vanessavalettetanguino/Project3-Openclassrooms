@@ -14,7 +14,7 @@
     bottom:0;
     position:fixed;
     background-color: $color-backlight;
-    animation: begin 3000ms 0s ease-in-out forwards;
+    animation: begin 3000ms 0s ease-in-out 1 forwards;
 }
 
 .loader {
@@ -73,28 +73,23 @@
     }
  
  }
-
-
 .main-block {
-animation: slidein 3000ms 3000ms ease-in-out backwards;
+animation: fadein 3000ms 3000ms ease-in-out backwards;
 }
 
 .footer {
- animation: slidein 3000ms 3000ms ease-in-out backwards;
+    animation: fadein 3000ms 3000ms ease-in-out backwards;
 }
 
-@keyframes slidein {
+@keyframes fadein {
     0% {
         opacity: 0;
-        z-index: -1;
     }
 
     100% {
         opacity: 1;
-        z-index: 10;
     }
 }
-
 .hiw {
     display: flex;
     flex-direction: column;
