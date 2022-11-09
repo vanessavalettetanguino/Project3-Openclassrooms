@@ -1,3 +1,7 @@
+.footer {
+    animation: none;
+} 
+
 .rest-banner-image {
     z-index: 1;
     object-fit: cover;
@@ -48,6 +52,48 @@
         }
     }
 
+    .rest-menu__starters {
+        .rest-menu__course {
+            animation: appear-up 400ms ease-out forwards;
+        }
+        .rest-menu__course + .secund-appear {
+            animation: appear-up 400ms 400ms ease-out forwards;
+        }
+        .rest-menu__course + .third-appear {
+            animation: appear-up 400ms 600ms ease-out forwards;
+        }
+        .rest-menu__course + .fourth-appear {
+            animation: appear-up 400ms 800ms ease-out forwards;
+        }
+    }
+
+    .rest-menu__main-courses {
+        .rest-menu__course {
+            animation: appear-up 400ms 1000ms ease-out forwards;
+        }
+        .rest-menu__course + .secund-appear {
+            animation: appear-up 400ms 1400ms ease-out forwards;
+        }
+        .rest-menu__course + .third-appear {
+            animation: appear-up 400ms 1600ms ease-out forwards;
+        }
+    
+    }
+
+
+    .rest-menu__desserts {
+        .rest-menu__course {
+            animation: appear-up 400ms 2000ms ease-out forwards;
+        }
+        .rest-menu__course + .secund-appear {
+            animation: appear-up 400ms 2400ms ease-out forwards;
+        }
+        .rest-menu__course + .third-appear {
+            animation: appear-up 400ms 2600ms ease-out forwards;
+        }
+    
+    }
+
 @keyframes filling {
         from {
             transform: scaleX(1);
@@ -82,6 +128,7 @@
         border-bottom: 5px solid $color-tertiary;
     }
 
+
     .rest-menu__course {
         background-color: $color-white;
         border-radius: 15px;
@@ -91,92 +138,7 @@
         margin: 10px 20px 10px 0px;
         box-shadow: $shadow-reg;
         position: relative;
-
-        .rest-menu__course-right-back-slider {
-            display: none;
-            }
-        
-        &:hover {
-            cursor: pointer;
-            .rest-menu__course-right-back-slider {
-            display: block;
-            background-color: $color-tertiary;
-            border-radius: 0px 15px 15px 0px;
-            width: 7%;
-            position: absolute;
-            padding: 40px;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: 0;
-            overflow-x: inherit;
-            transform-origin: right 100%;
-            animation: slidein 450ms ease-in-out 1 forwards;
-            }
-            .rest-menu__course-details  {    
-                    text-transform: none;
-                    transform-origin: left 100%;  
-                    animation: slidein-left 450ms ease-in-out 1 forwards;
-                    .rest-menu__course-desc {
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-                }
-
-            .rest-menu__checkedcourse {
-                display: block;
-                position: absolute;
-                background-color: transparent;
-                color: $color-white;
-                padding: 40px;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                font-size: 30px;
-                z-index: -1;
-                animation: left-rotate 550ms 10ms ease-in-out 1 forwards;        
-            }
-            }
-        }
-
-        @keyframes left-rotate {
-            0% {
-                transform: rotate(360deg);
-                z-index:0;
-            }
-
-            50% {
-                transform: rotate(180deg);
-                z-index: 1;
-            }
-        
-            100% {
-                transform: rotateX(0deg);
-                z-index:1;
-            }
-        } 
-
-        @keyframes slidein {
-            0% {
-                transform: scaleX(0%);
-            }
-
-            100% {
-                transform: scaleX(100%);
-            }
-        }
-
-        @keyframes slidein-left {
-            0% {
-                transform: scaleX(100%);
-            }
-
-            100% {
-                transform: scaleX(80%);
-            }
-        }
-        }
+        opacity: 0;
 
         .rest-menu__course-details {
             font-size: 18px;
@@ -196,6 +158,139 @@
                 z-index: 1;
             }
         }
+        
+        &:hover {
+            cursor: pointer;
+            .rest-menu__course-right-back-slider {
+            display: block;
+            background-color: $color-tertiary;
+            border-radius: 0px 15px 15px 0px;
+            width: 7%;
+            position: absolute;
+            padding: 40px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 0;
+            transform-origin: right 100%;
+            animation: slidein 450ms ease-in-out 1 forwards;
+            .rest-menu__checkedcourse {
+                display: block;
+                position: absolute;
+                background-color: transparent;
+                color: $color-white;
+                padding: 40px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                font-size: 30px;
+                z-index: -1;
+                animation: left-rotate 550ms 10ms ease-in-out 1 forwards; 
+            }
+            }
+            .rest-menu__course-details  {    
+                    .rest-menu__course-desc {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        display: block;
+                        width: 150px;
+                        min-width: 0;
+                    }
+                    .rest-menu__course-price {
+                        transform-origin: left 100%;
+                        display: block;
+                        animation: slidein-left 450ms ease-in-out 1 forwards;
+                        }
+                }
+        }
+
+        @keyframes left-rotate {
+            0% {
+                transform: rotate(360deg);
+                z-index:0;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                z-index: 1;
+            }
+        
+            100% {
+                transform: rotateX(0deg);
+                z-index:1;
+            }
+        } 
+
+        @keyframes right-rotate {
+            0% {
+                transform: rotate(0deg);
+                z-index:1;
+            }
+
+            50% {
+                transform: rotate(180deg);
+                z-index: 1;
+            }
+        
+            100% {
+                transform: rotateX(360deg);
+                z-index:0;
+            }
+        } 
+
+        @keyframes slidein {
+            0% {
+                transform: scaleX(0%);
+            }
+
+            100% {
+                transform: scaleX(100%);
+            }
+        }
+
+        @keyframes slideout {
+            0% {
+                transform: scaleX(107%);
+            }
+
+            100% {
+                transform: scaleX(0%);
+            }
+        }
+
+        @keyframes slidein-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-90px);
+            }
+        }
+        }
+
+        @keyframes appear-up {
+            0% {
+                transform: translateY(40px);
+                opacity: 0;
+                z-index: -10;
+            }
+
+            50% {
+                transform: translateY(20px);
+                opacity: 0.5;
+                z-index: 0;
+            }
+    
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+                z-index: 10;
+
+            }
+        }
+
         .rest-menu__course-left-slider {
             width: 100%;
             display: flex;
@@ -204,14 +299,7 @@
             justify-content: space-between;
             height: 100%;
             margin: 10px 20px 10px 0px;
-            z-index: 1;
-            .rest-menu__course-desc {
-                text-overflow: ellipsis;
-                white-space: wrap;
-                z-index: -1;
-            }
         }
-    
 
         .rest-menu__course-name {
             margin-bottom: 0px;
@@ -226,9 +314,6 @@
             justify-content: space-between;
             width: 92%;
             padding-right: 10px;
-            overflow: hidden;
-            white-space: wrap;
-            text-overflow: ellipsis; 
             .rest-menu__course-desc {
                 z-index: 0;
             }
@@ -243,8 +328,5 @@
     justify-content: center;
     align-items: center;
     background-color: $color-backlight;
+} 
 }
-
-.footer {
-    animation: none;
-   }
