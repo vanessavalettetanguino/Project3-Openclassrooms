@@ -1,6 +1,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-transparent: transparent;
 $color-backlight: rgb(245,245,245);
 $color-backdark: rgb(234,234,234);
 $color-backdark-50: rgba(234,234,234,0.5);
@@ -21,3 +22,5 @@ $color-grad-5: #9356dc;
  $size: 3vh;
  $anim-dur: 1000ms;
  $anim-delay: 250ms;
+/* Maps */ 
+$breakpoints: (tablet: 768px,desktop: 992px);
