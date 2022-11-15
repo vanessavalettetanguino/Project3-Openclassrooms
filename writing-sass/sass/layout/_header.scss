@@ -3,19 +3,35 @@ header {
     margin: 30px auto 20px auto;
     display: flex;
     justify-content: center;
+    @include desktop-only {
+        max-width: 100%;
+        margin: 40px auto 30px auto;
+        height: 35px;
+    }
 }
 
 .header-menupage {
     display: flex;
     align-items: center;
+    @include desktop-only {
+        height: 20px
+    }
     #logo {
         margin: auto;
+        @include desktop-only {
+            margin: 15px auto;
+            height: 30px;
+        }
     }
+
     .header-menupage__link {
         align-self: flex-start;
         position:absolute;
         left: 10px;
         top: 30px;
+        @include desktop-only {
+            left: 20px; 
+        }
         .header-menupage__icon {
             font-size: 30px;
             color: black;
