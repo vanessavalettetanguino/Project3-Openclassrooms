@@ -2,6 +2,10 @@
     background-color: $color-backfooter;
     color: $color-white;
     font-size: 18px;
+    animation: fadein 3000ms 3000ms ease-in-out backwards;
+    &__menupage {
+        animation: none;
+    }
     &__lists-icons {
         display: flex;
         list-style: none;
@@ -48,3 +52,4 @@
         padding-bottom: 10px;
     }
  }
+
