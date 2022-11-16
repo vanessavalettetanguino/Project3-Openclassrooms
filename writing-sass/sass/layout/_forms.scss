@@ -23,6 +23,9 @@
         @include desktop-only {
             width: 100%;
         }
+        @include tablet-only {
+            width: 100%;
+        }
     }
     .rest-search__heading {
         width: 70%;
