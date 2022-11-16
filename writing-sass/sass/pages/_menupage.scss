@@ -10,6 +10,9 @@ footer {
     @include desktop-only {
         height: 250px; 
     }
+    @include tablet-only {
+        height: 200px
+    }
 }
 
 .rest-menu {
@@ -32,6 +35,10 @@ footer {
             right: 10em;
             margin-left: 10px;
         }
+        @include tablet-only {
+            right: 4em;
+            top: 35px;
+        }
 
         &:hover {
             cursor: pointer;
@@ -51,6 +58,10 @@ footer {
         @include desktop-only {
             right: 10em;
             margin-left: 10px;
+        }
+        @include tablet-only {
+            right: 4em;
+            top: 35px;
         }
 
         &:hover {
@@ -139,8 +150,11 @@ footer {
         font-size: 34px;
         margin-right: 10px; 
         @include desktop-only {
-            margin: 10px auto 10px auto;
+            margin: 10px auto;
             position: relative;
+        }
+        @include tablet-only {
+            margin: 30px 12px 12px 75px;
         }
     }
 
@@ -148,6 +162,11 @@ footer {
         @include desktop-only {
             display: flex;
             width: 100%;
+            justify-content: flex-start;
+        }
+        @include tablet-only {
+            margin: 15px auto;
+            width: 80%;
         }
 
     .rest-menu__type-heading {
@@ -162,6 +181,7 @@ footer {
     .rest-menu__courses-type {
         @include desktop-only {
             width: 33%;
+            margin: 0;
         }
     }
             
@@ -196,7 +216,6 @@ footer {
             .rest-menu__course-desc {
                 z-index: 0;
                 width: auto;
-                flex-shrink: 0;
                 text-overflow: ellipsis; 
             }
             .rest-menu__course-price {
@@ -250,7 +269,7 @@ footer {
                 }  
             .rest-menu__course-details  {    
                 @include desktop-only {
-                    width: 100%;
+                    max-width: 100%;
                 }
 
                 .rest-menu__course-desc {
@@ -261,7 +280,8 @@ footer {
                         width: 150px;
                         min-width: 0;
                         @include desktop-only {
-                            width: 70px;
+                            width: 80px;
+                            min-width: 0;
                         }
                     }
                     .rest-menu__course-price {
@@ -345,6 +365,9 @@ footer {
             justify-content: space-between;
             height: 100%;
             margin: 10px 20px 10px 0px;
+            @include desktop-only {
+                width: 95%;
+            }
         }
 
         .rest-menu__course-name {
@@ -368,12 +391,22 @@ footer {
             align-items: center;
             justify-content: space-between;
             width: 92%;
+            max-width: 100%;
             padding-right: 10px;
             @include desktop-only {
-                width: 90%; 
+                width: fill-available;
             }
             .rest-menu__course-desc {
                 z-index: 0;
+                overflow: hidden;
+                @include desktop-only {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: 16px;
+                    z-index: 0;
+                    width: fill-available;
+                }
             }
             .rest-menu__course-price {
                 font-weight: 600;
