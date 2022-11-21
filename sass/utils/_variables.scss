@@ -1,0 +1,26 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-transparent: transparent;
+$color-backlight: rgb(245,245,245);
+$color-backdark: rgb(234,234,234);
+$color-backdark-50: rgba(234,234,234,0.5);
+$color-white: #FFF;
+$color-icon-inactive: rgb(125,125,125);
+$color-step-active: rgb(245,237,255);
+$color-backfooter: rgb(53,53,53);
+$shadow-reg: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$shadow-card-accent: 0 16px 24px 0 rgba(0,0,0,0.5);
+$shadow-accent: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+/* gradient colors */
+$color-grad-1:#ff79da;
+$color-grad-2:#e86edb;
+$color-grad-3: #cf64dc; 
+$color-grad-4: #b35cdc;
+$color-grad-5: #9356dc;
+ /* animation variable*/ 
+ $size: 3vh;
+ $anim-dur: 1000ms;
+ $anim-delay: 250ms;
+/* Maps */ 
+$breakpoints: (tablet: 768px,desktop: 992px);

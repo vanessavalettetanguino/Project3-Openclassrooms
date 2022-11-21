@@ -1,0 +1,387 @@
+.loader-block {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 22px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:fixed;
+    background-color: $color-backlight;
+    animation: begin 3000ms 0s ease-in-out 1 forwards;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center;
+    position: relative;
+}
+
+.loader-block__ring {
+    border-radius: 50px;
+    border: 6px solid $color-backdark-50;
+    margin-right: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        bottom: -6px;
+        right: -6px;
+        border-radius: 50px;
+        border: 6px solid transparent;
+        border-top-color: $color-primary;
+        animation: spin 900ms 200ms linear infinite both;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: $color-primary;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-top-color: $color-secondary;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes begin {
+    0% {
+     opacity:1;
+     z-index:10;
+    } 
+ 
+    100% {
+     opacity:0;
+     z-index: -1;
+    }
+ 
+ }
+.main-block {
+animation: fadein 3000ms 3000ms ease-in-out backwards;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.hiw {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin-left: 10px;
+    @include desktop-only{
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin-left: 10px;
+    }
+
+    .hiw__heading {
+        margin: 30px 0px 20px 10px;
+        @include desktop-only {
+            margin: 30px auto 20px auto;
+            width: 90%;
+            margin: 80px auto 30px auto;
+            text-align: center
+        }
+        @include tablet-only {
+            margin-left: 30px;
+        }
+    }
+}
+
+.hiw-step {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-items: center;
+    margin: 10px auto;
+    border-radius: 15px;
+    width: 90%;
+    min-height: 33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    @include desktop-only {
+        margin: 30px auto 20px auto;
+        width: 30%;
+    }
+    @include tablet-only {
+        margin: 30px auto 15px auto;
+        width: 45%;
+    }
+    
+
+    .hiw-step__icon {
+        color: $color-icon-inactive;
+        margin: auto 10px;
+        @include flex-center-center;
+        justify-items: center;
+        font-size: 16px;
+        @include desktop-only {
+            margin: auto 30px;
+            font-size: 20px;
+        }
+        @include tablet-only {
+            margin: auto 20px;
+            font-size: 18px;
+        }
+    }
+
+    .hiw-step__number {
+        background-color: $color-primary;
+        border-radius: 30px;
+        color: $color-white;
+        width: 25px;
+        height: 25px;
+        @include flex-center-center;
+        margin-right: 10px;
+        margin-left: -10px;
+    }
+
+    .hiw-step__text {
+        margin: auto 20px;
+        font-size: 16px;
+        font-weight: 600;
+        @include desktop-only {
+            margin: auto 10px;
+            word-break: normal;
+        }
+        @include tablet-only {
+            margin: auto 15px;
+            word-break: normal;
+        }
+    }
+
+    &:hover {
+        background-color: $color-step-active;
+
+        .hiw-step__icon {
+            color: $color-primary;
+        }
+    }
+}
+
+.rest-results {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 30px;
+    @include desktop-only {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include tablet-only {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rest-results__heading {
+        margin: 80px 0px 20px 25px;
+        @include desktop-only {
+            width: 90%;
+            margin: 80px auto 50px auto;
+            text-align: center
+        }
+        @include tablet-only {
+            margin: 80px 350px 20px 40px;
+        }
+    }
+}
+
+.rest-card-prev {
+    @include flex-col-flexstart;
+    margin: 10px auto;
+    border-radius: 15px;
+    width: 90%;
+    height: 40%;
+    text-align: left;
+    color: black;
+    box-shadow: $shadow-reg;
+    position: relative;
+    @include desktop-only {
+        width: 22%;
+        height: 10%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @include tablet-only {
+        width: 40%;
+        height: 20%;
+        margin: 20px auto;
+    }
+
+    &:hover {
+        box-shadow: $shadow-card-accent;
+    }
+
+    &__hearticon--reg {
+        display: contents;
+        font-size: 30px;
+        margin: 10px 10px 10px 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        @include desktop-only {
+            font-size: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    &__hearticon--solid {
+        font-size: 30px;
+        margin: 10px 10px 10px 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: none;
+        color: transparent;
+        transition: scale(1);
+        @include desktop-only {
+            font-size: 20px;
+        }
+
+        &:hover {
+            content: "";
+            cursor: pointer;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
+            color: transparent;
+            overflow: hidden;
+            animation: filling 850ms 0s ease-in-out backwards;
+        }
+    }
+
+@keyframes filling {
+        from {
+            transform: scaleX(1);
+            opacity: 0.1;
+        }
+    
+        to {
+            transform: scaleX(1.15);
+            opacity: 1;
+        }
+    }
+
+    .rest-card-prev__link {
+        @include flex-col-flexstart;
+        width: 100%;
+        text-decoration: none;
+        object-fit: over;
+        position: relative;
+        &:active {
+            color: $color-primary;
+        }
+
+        .rest-card-prev__new {
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 35%);
+            width: 80px;
+            height: 25px;
+            @include flex-center-center;
+            position: absolute;
+            right: 0.5em;
+            top: 0;
+            bottom: 0;
+            @include tablet-only {
+                right: 1em;
+            }
+        }
+
+        .rest-card-prev__image {
+            border-radius: 15px 15px 0px 0px;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            @include desktop-only {
+                height: 150px;
+            }
+            @include tablet-only {
+                height: 150px;
+            }
+        }
+
+        .rest-card-prev__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 10px;
+            text-decoration: none;
+            width: 98%;
+            align-items: center;
+            @include desktop-only {
+                margin-left: 20px;
+            }
+            @include tablet-only {
+                margin-left: 15px;
+            }
+        }
+
+        .rest-card-prev__texts {
+            @include flex-col-flexstart;
+            justify-content: flex-start;
+        }
+
+        .rest-card-prev__rest-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 20px 0px 5px 0px;
+            @include desktop-only {
+                font-size: 16px;
+            }
+
+        }
+
+        .rest-card-prev__location {
+            font-size: 18px;
+            font-size: 400;
+            margin: 0px 0px 20px 0px;
+            @include desktop-only {
+                font-size: 14px;
+            }
+        }
+
+    }
+ }
