@@ -1,0 +1,50 @@
+.btn {
+    border-radius: 3em;
+    border: none;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 18px;
+    padding: 0px 20px;
+    cursor: pointer;
+    box-shadow: $shadow-reg;
+    background: linear-gradient(to right bottom, $color-grad-1, $color-grad-2, $color-grad-3, $color-grad-4, $color-grad-5);
+    position:relative;
+    z-index: 1;
+    @include desktop-only {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        border-radius: 3em;
+        border: none;
+        position:absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: $shadow-accent;
+        background: linear-gradient(to right bottom, lighten($color-grad-1, 5%),lighten($color-grad-2, 5%), lighten($color-grad-3, 5%), lighten($color-grad-4, 5%), lighten($color-grad-5, 5%));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}
+
+.btn-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    width: 40%;
+    padding: 10px 0px 10px 0px;
+    background-color: $color-backlight;
+    @include desktop-only {
+        width: 20%;
+    }
+}
