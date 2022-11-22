@@ -3,10 +3,10 @@
     color: $color-white;
     font-size: 18px;
     animation: fadein 3000ms 3000ms ease-in-out backwards;
-    &__menupage {
+    .footer__menupage {
         animation: none;
     }
-    &__lists-icons {
+    .footer__lists-icons {
         display: flex;
         list-style: none;
         margin-top: 0px;
@@ -22,9 +22,9 @@
                     margin-right: 15px;
                     font-size: 16px;
                 }
+            }
         }
-     }
- }
+    }
 
     > ul {
         list-style: none;
